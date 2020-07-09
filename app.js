@@ -1,13 +1,27 @@
 const btn = document.querySelector('.btn');
-let secondes = 10;
+const input = document.querySelector('.input');
+let secondes;
 let interval;
 
 
 const start = () => {
+  
   interval = setInterval(decompte, 1000);
 }
 
-btn.addEventListener('click',start);
+btn.addEventListener('click',(e) => {
+  e.preventDefault();
+  if (isNaN(input.value)) {
+    
+    alert('Veuillez rentrer un nombre svp, pas du texte')
+
+  } else {
+
+    secondes = input.value;
+    start();
+    e.preventDefault();
+  }
+});
 
 
 const stop = () => {
