@@ -3,13 +3,22 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
   <title>Timer</title>
 </head>
 <body>
-  <form action="">
-    <input class='input' type="text"/>
-    <button class='btn'>Lancer le décompte</button>
-  </form>
+  <div id='container'>
+    <div class='title'>Timer</div>
+    <div class='counter'>0</div>
+    <form class='form'action="">
+      <div class='field'>
+        <input class='input' type="text" placeholder="Entrer la durée"/>
+      </div>
+      
+      <button class='btn'>Lancer le décompte</button>
+    </form>
+  </div>
+  
   <script src="app.js"></script>
 </body>
 </html>
